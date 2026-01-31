@@ -6,37 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body { margin:0; font-family:'Arial', sans-serif; background:#f9f9f9; color:#333; }
-/* Header */
 header { background: linear-gradient(90deg,#1f7a1f,#25d366); color:white; padding:25px 15px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
 header h1 { margin:0; font-size:26px; }
 header p { margin:5px 0; }
-/* Sections */
 section { background:white; margin:15px; padding:20px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
-/* Carousel */
 .carousel { display:flex; overflow-x:auto; scroll-behavior:smooth; padding-bottom:10px; }
 .carousel::-webkit-scrollbar { display:none; }
 .carousel-item { min-width:200px; margin-right:12px; background:#fff5e6; border-radius:12px; padding:10px; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center;}
-.carousel-item img { width:100%; border-radius:12px; }
-/* Menu items */
+.carousel-item img { width:100%; border-radius:12px; object-fit:cover; }
 .menu-item { display:flex; align-items:center; margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:10px; }
 .menu-item img { width:70px; height:70px; border-radius:10px; margin-right:12px; object-fit:cover;}
 .menu-item div { flex:1; }
-/* Price */
 .price { font-size:28px; color:#1f7a1f; font-weight:bold; }
-/* Form Inputs */
 input, select { width:100%; padding:12px; margin:8px 0; border-radius:10px; border:1px solid #ccc; font-size:16px; }
-/* Quantity */
 .quantity-box { display:flex; justify-content: space-between; align-items:center; margin:10px 0; }
 .quantity-box button { padding:8px 15px; font-size:18px; border:none; background:#1f7a1f; color:white; border-radius:8px; cursor:pointer; transition:0.2s;}
 .quantity-box button:hover { background:#145214; }
-/* Buttons */
 .order-btn { display:block; width:100%; text-align:center; margin:15px 0; background:#25D366; color:white; padding:15px; font-size:20px; border-radius:12px; font-weight:bold; cursor:pointer; border:none; transition: transform 0.2s, box-shadow 0.2s; }
 .order-btn:hover { transform: scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.2); }
-/* Map Preview */
 #mapPreview { width:100%; height:220px; margin-top:10px; border-radius:12px; display:none; }
-/* Footer */
 .footer { text-align:center; font-size:14px; color:#777; padding:12px; }
-/* Responsive */
 @media(max-width:480px){ header h1{font-size:22px;} .price{font-size:24px;} .order-btn{font-size:18px;padding:14px;} .menu-item img{width:60px;height:60px;} .carousel-item{min-width:160px;} }
 </style>
 </head>
@@ -52,19 +41,19 @@ input, select { width:100%; padding:12px; margin:8px 0; border-radius:10px; bord
   <h2>⭐ Today’s Specials</h2>
   <div class="carousel">
     <div class="carousel-item">
-      <img src="https://via.placeholder.com/200x120?text=Paneer+Butter+Masala" alt="Paneer Butter Masala">
+      <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="Paneer Butter Masala">
       <p>Paneer Butter Masala</p>
     </div>
     <div class="carousel-item">
-      <img src="https://via.placeholder.com/200x120?text=Chole+Bhature" alt="Chole Bhature">
+      <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg" alt="Chole Bhature">
       <p>Chole Bhature</p>
     </div>
     <div class="carousel-item">
-      <img src="https://via.placeholder.com/200x120?text=Dal+Tadka" alt="Dal Tadka">
+      <img src="https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg" alt="Dal Tadka">
       <p>Dal Tadka</p>
     </div>
     <div class="carousel-item">
-      <img src="https://via.placeholder.com/200x120?text=Veg+Biryani" alt="Veg Biryani">
+      <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="Veg Biryani">
       <p>Veg Biryani</p>
     </div>
   </div>
@@ -73,23 +62,27 @@ input, select { width:100%; padding:12px; margin:8px 0; border-radius:10px; bord
 <section>
   <h2>📋 Menu</h2>
   <div class="menu-item">
-    <img src="https://via.placeholder.com/70?text=Roti" alt="Roti">
+    <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="Roti">
     <div>5 Fresh Roti</div>
   </div>
   <div class="menu-item">
-    <img src="https://via.placeholder.com/70?text=Sookhi+Sabzi" alt="Sookhi Sabzi">
+    <img src="https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg" alt="Dal">
+    <div>Dal Tadka</div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg" alt="Sookhi Sabzi">
     <div>1 Sookhi Sabzi</div>
   </div>
   <div class="menu-item">
-    <img src="https://via.placeholder.com/70?text=Rasili+Sabzi" alt="Rasili Sabzi">
+    <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="Rasili Sabzi">
     <div>1 Rasili Sabzi</div>
   </div>
   <div class="menu-item">
-    <img src="https://via.placeholder.com/70?text=Salad+%26+Raita" alt="Salad & Raita">
+    <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg" alt="Salad & Raita">
     <div>Salad + Raita</div>
   </div>
   <div class="menu-item">
-    <img src="https://via.placeholder.com/70?text=Extra+Chawal" alt="Extra Chawal">
+    <img src="https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg" alt="Chawal">
     <div>Weekly Extra: 3 Day Chawal (available)</div>
   </div>
   <p class="price">₹90 Only</p>
@@ -198,5 +191,4 @@ function sendWhatsAppOrder() {
 </script>
 
 </body>
-    </html>
-    
+</html>
