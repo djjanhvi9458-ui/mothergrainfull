@@ -1,198 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<title>MotherGrainFull Tiffin Services | Aligarh</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body { margin:0; font-family:'Arial', sans-serif; background:#f9f9f9; color:#333; }
-header { background: linear-gradient(90deg,#1f7a1f,#25d366); color:white; padding:20px 15px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
-header h1 { margin:0; font-size:24px; }
-header p { margin:5px 0; font-size:14px; }
-section { background:white; margin:15px; padding:15px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
-.menu-item { display:flex; align-items:center; margin-bottom:10px; border-bottom:1px solid #eee; padding-bottom:8px; }
-.menu-item img { width:60px; height:60px; border-radius:10px; margin-right:10px; object-fit:cover; }
-.menu-item div { flex:1; font-size:14px; }
-.price { font-size:22px; color:#1f7a1f; font-weight:bold; margin-top:10px; }
-input, select { width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid #ccc; font-size:14px; }
-.quantity-box { display:flex; justify-content: space-between; align-items:center; margin:8px 0; }
-.quantity-box button { padding:6px 12px; font-size:16px; border:none; background:#1f7a1f; color:white; border-radius:6px; cursor:pointer; transition:0.2s;}
-.quantity-box button:hover { background:#145214; }
-.order-btn { display:block; width:100%; text-align:center; margin:12px 0; background:#25D366; color:white; padding:12px; font-size:18px; border-radius:10px; font-weight:bold; cursor:pointer; border:none; transition: transform 0.2s, box-shadow 0.2s; }
-.order-btn:hover { transform: scale(1.03); box-shadow:0 4px 10px rgba(0,0,0,0.2); }
-#mapPreview { width:100%; height:200px; margin-top:8px; border-radius:10px; display:none; }
-.upi-qrcode { width:150px; height:150px; display:block; margin:10px auto; }
-.footer { text-align:center; font-size:12px; color:#777; padding:10px; }
-@media(max-width:480px){
-  header h1{font-size:20px;} 
-  header p{font-size:12px;} 
-  .price{font-size:20px;} 
-  .order-btn{font-size:16px;padding:10px;} 
-  .menu-item img{width:50px;height:50px;} 
-  .upi-qrcode { width:120px; height:120px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mother Grainfull Tiffin</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .item {
+      background: white;
+      border-radius: 10px;
+      padding: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .item img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .item p {
+      margin: 6px 0 0;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: white;
+      background: #25D366;
+    }
+
+    .upi {
+      background: #0f9d58;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>🍱 MotherGrainFull Tiffin Services</h1>
-  <p>Ghar jaisa swad • Saaf • Healthy</p>
-  <p>📍 Aligarh City</p>
-</header>
+<h1>🍱 Mother Grainfull Tiffin</h1>
+<p>Ghar jaisa khana – roz fresh</p>
 
-<section>
-  <h2>📋 Menu</h2>
-  <div class="menu-item">
-    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=70&h=70&q=80" alt="Roti">
-    <div>5 Fresh Roti</div>
+<!-- MENU -->
+<div class="menu">
+  <div class="item">
+    <img src="images/roti.jpeg">
+    <p>Roti</p>
   </div>
-  <div class="menu-item">
-    <img src="https://images.unsplash.com/photo-1627495665842-7c5d08f54b85?auto=format&fit=crop&w=70&h=70&q=80" alt="Sookhi Sabzi">
-    <div>1 Sookhi Sabzi</div>
+
+  <div class="item">
+    <img src="images/chawal.jpeg">
+    <p>Chawal</p>
   </div>
-  <div class="menu-item">
-    <img src="https://images.unsplash.com/photo-1604908177522-77d29ecb007e?auto=format&fit=crop&w=70&h=70&q=80" alt="Rasili Sabzi">
-    <div>1 Rasili Sabzi</div>
+
+  <div class="item">
+    <img src="images/sukhi sabzi.jpeg">
+    <p>Sukhi Sabzi</p>
   </div>
-  <div class="menu-item">
-    <img src="https://images.unsplash.com/photo-1606755962773-3be37a0a9cfa?auto=format&fit=crop&w=70&h=70&q=80" alt="Salad & Raita">
-    <div>Salad + Raita</div>
+
+  <div class="item">
+    <img src="images/rasili.jpeg">
+    <p>Rasili Sabzi</p>
   </div>
-  <div class="menu-item">
-    <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb53?auto=format&fit=crop&w=70&h=70&q=80" alt="Chawal">
-    <div>Extra: 3 Chawal (jab available)</div>
+
+  <div class="item">
+    <img src="images/raita.jpeg">
+    <p>Raita</p>
   </div>
-  <p class="price">₹90 Only</p>
-</section>
 
-
-<section>
-  <h2>⏰ Timing</h2>
-  <p>🍽 <b>Lunch:</b> 12:00 PM – 2:30 PM</p>
-  <p>🌙 <b>Dinner:</b> 5:00 PM – 8:30 PM</p>
-  <p class="note">⚠️ Order 1 ghanta pehle dena zaroori hai</p>
-</section>
-
-<section>
-  <h2>💰 Payment Options</h2>
-  <ul>
-    <li>Cash on Delivery</li>
-    <li>Online Payment via UPI: <b>9084537228@pthdfc</b></li>
-    <img class="upi-qrcode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=9084537228@pthdfc&pn=MotherGrainFull&tn=Tiffin%20Payment&am=90&cu=INR" alt="UPI QR Code">
-  </ul>
-</section>
-
-<section>
-  <h2>📦 Order Form</h2>
-  <form id="orderForm">
-    <input type="text" id="name" placeholder="Naam" required>
-    <input type="tel" id="mobile" placeholder="Mobile Number" required>
-    <input type="text" id="address" placeholder="Address" required>
-    <select id="meal" required>
-      <option value="">Lunch / Dinner</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-    </select>
-    <div class="quantity-box">
-        <button type="button" onclick="decreaseQty()">-</button>
-        <span id="quantityDisplay">1</span>
-        <button type="button" onclick="increaseQty()">+</button>
-    </div>
-    <input type="hidden" id="quantity" value="1">
-    <select id="payment" required>
-      <option value="">Payment Method</option>
-      <option value="Cash">Cash on Delivery</option>
-      <option value="UPI">Online Payment (UPI)</option>
-    </select>
-    <button type="button" class="order-btn" onclick="sendWhatsAppOrder()">Order on WhatsApp</button>
-  </form>
-  <iframe id="mapPreview" src="" frameborder="0"></iframe>
-</section>
-
-<div class="footer">
-  © 2026 MotherGrainFull Tiffin Services | Aligarh
+  <div class="item">
+    <img src="images/salad.jpeg">
+    <p>Salad</p>
+  </div>
 </div>
 
+<h3>💰 Daily Tiffin – ₹80</h3>
+
+<!-- WHATSAPP ORDER WITH LIVE LOCATION -->
+<button onclick="sendLocation()">
+  📍 Order on WhatsApp (Live Location)
+</button>
+
+<!-- UPI PAYMENT -->
+<button class="upi" onclick="payNow()">
+  💳 Pay Online via UPI
+</button>
+
+<footer>
+  📞 Contact: 9084537228  
+  <br>🚚 Home Delivery Available
+</footer>
+
 <script>
-const PRICE_PER_TIFFIN = 90;
+function sendLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
 
-function increaseQty(){
-    let qty = parseInt(document.getElementById('quantity').value);
-    qty++;
-    document.getElementById('quantity').value = qty;
-    document.getElementById('quantityDisplay').innerText = qty;
+      var msg =
+        "🙏 Order Details:%0A" +
+        "Mother Grainfull Tiffin%0A" +
+        "Location: https://www.google.com/maps?q=" + lat + "," + lon;
+
+      var whatsapp =
+        "https://wa.me/919084537228?text=" + msg;
+
+      window.open(whatsapp, "_blank");
+    }, function() {
+      alert("Location allow karo");
+    });
+  } else {
+    alert("Location support nahi karta phone");
+  }
 }
-function decreaseQty(){
-    let qty = parseInt(document.getElementById('quantity').value);
-    if(qty>1) qty--;
-    document.getElementById('quantity').value = qty;
-    document.getElementById('quantityDisplay').innerText = qty;
-}
 
-function sendWhatsAppOrder() {
-    var name = document.getElementById('name').value.trim();
-    var mobile = document.getElementById('mobile').value.trim();
-    var address = document.getElementById('address').value.trim();
-    var meal = document.getElementById('meal').value;
-    var quantity = parseInt(document.getElementById('quantity').value);
-    var payment = document.getElementById('payment').value;
-
-    if(!name || !mobile || !address || !meal || !quantity || !payment){
-        alert("Please fill all fields!");
-        return;
-    }
-
-    var total = quantity * PRICE_PER_TIFFIN;
-    var paymentText = payment === "UPI" ? `Online Payment via UPI: 9084537228@pthdfc (Total: ₹${total})` : `Cash on Delivery (Total: ₹${total})`;
-
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(function(position){
-            var lat = position.coords.latitude;
-            var lon = position.coords.longitude;
-
-            var mapUrl = "https://www.google.com/maps?q="+lat+","+lon+"&output=embed";
-            var mapFrame = document.getElementById('mapPreview');
-            mapFrame.src = mapUrl;
-            mapFrame.style.display="block";
-
-            var whatsappLink = "https://wa.me/919084537228?text=🙏%20MotherGrainFull%20Tiffin%20Services%20-%20Aligarh%0A%0A📦%20Tiffin%20Order%20Details:%0A1.%20Naam:%20"+encodeURIComponent(name)+
-            "%0A2.%20Mobile:%20"+encodeURIComponent(mobile)+
-            "%0A3.%20Address:%20"+encodeURIComponent(address)+
-            "%0A4.%20Lunch/Dinner:%20"+encodeURIComponent(meal)+
-            "%0A5.%20Quantity:%20"+encodeURIComponent(quantity)+
-            "%0A6.%20Payment:%20"+encodeURIComponent(paymentText)+
-            "%0A7.%20Location:%20https://www.google.com/maps?q="+lat+","+lon+
-            "%0A%0A⚠️%20Order%201%20ghanta%20pehle dena zaroori hai";
-
-            window.open(whatsappLink,"_blank");
-        }, function(error){
-            alert("Location access dena zaroori hai order bhejne ke liye!");
-        });
-    }else{
-        alert("Aapke browser me location support nahi karta.");
-    }
+function payNow() {
+  window.location.href =
+    "upi://pay?pa=9084537228@pthdfc&pn=Mother%20Grainfull&am=80&cu=INR";
 }
 </script>
-
-</body>
-  </html>
-  
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Mother Grainfull</title>
-</head>
-<body>
-
-<h1>Today Tiffin Menu</h1>
-
-<img src="images/chawal.jpeg" width="200">
-<img src="images/raita.jpeg" width="200">
-<img src="images/rasili.jpeg" width="200">
-<img src="images/roti.jpeg" width="200">
-<img src="images/salad.jpeg" width="200">
-<img src="images/sukhi sabzi.jpeg" width="200">
 
 </body>
 </html>
