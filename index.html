@@ -10,6 +10,10 @@ header { background: linear-gradient(90deg,#1f7a1f,#25d366); color:white; paddin
 header h1 { margin:0; font-size:24px; }
 header p { margin:5px 0; font-size:14px; }
 section { background:white; margin:15px; padding:15px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+.carousel { display:flex; overflow-x:auto; scroll-behavior:smooth; padding-bottom:10px; }
+.carousel::-webkit-scrollbar { display:none; }
+.carousel-item { min-width:140px; margin-right:10px; border-radius:12px; text-align:center; flex-shrink:0; }
+.carousel-item img { width:140px; height:90px; border-radius:10px; object-fit:cover; }
 .menu-item { display:flex; align-items:center; margin-bottom:10px; border-bottom:1px solid #eee; padding-bottom:8px; }
 .menu-item img { width:60px; height:60px; border-radius:10px; margin-right:10px; object-fit:cover; }
 .menu-item div { flex:1; font-size:14px; }
@@ -29,6 +33,8 @@ input, select { width:100%; padding:10px; margin:6px 0; border-radius:8px; borde
   .price{font-size:20px;} 
   .order-btn{font-size:16px;padding:10px;} 
   .menu-item img{width:50px;height:50px;} 
+  .carousel-item img{width:120px;height:80px;} 
+  .carousel-item{min-width:120px;}
   .upi-qrcode { width:120px; height:120px; }
 }
 </style>
@@ -42,25 +48,43 @@ input, select { width:100%; padding:10px; margin:6px 0; border-radius:8px; borde
 </header>
 
 <section>
+  <h2>⭐ Today’s Specials</h2>
+  <div class="carousel">
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1605471379235-8cf4fa9f8fae?auto=format&fit=crop&w=300&h=200&q=80" alt="Roti">
+      <p>Roti</p>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1598514982210-f605d81b0892?auto=format&fit=crop&w=300&h=200&q=80" alt="Sabzi">
+      <p>Sookhi Sabzi</p>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1617196036031-0f30f65d1c28?auto=format&fit=crop&w=300&h=200&q=80" alt="Rasili Sabzi">
+      <p>Rasili Sabzi</p>
+    </div>
+  </div>
+</section>
+
+<section>
   <h2>📋 Menu</h2>
   <div class="menu-item">
-    <img src="images/roti.jpg" alt="Roti">
+    <img src="https://images.unsplash.com/photo-1605471379235-8cf4fa9f8fae?auto=format&fit=crop&w=70&h=70&q=80" alt="Roti">
     <div>5 Fresh Roti</div>
   </div>
   <div class="menu-item">
-    <img src="images/sabzi1.jpg" alt="Sookhi Sabzi">
+    <img src="https://images.unsplash.com/photo-1598514982210-f605d81b0892?auto=format&fit=crop&w=70&h=70&q=80" alt="Sookhi Sabzi">
     <div>1 Sookhi Sabzi</div>
   </div>
   <div class="menu-item">
-    <img src="images/sabzi2.jpg" alt="Rasili Sabzi">
+    <img src="https://images.unsplash.com/photo-1617196036031-0f30f65d1c28?auto=format&fit=crop&w=70&h=70&q=80" alt="Rasili Sabzi">
     <div>1 Rasili Sabzi</div>
   </div>
   <div class="menu-item">
-    <img src="images/salad_raita.jpg" alt="Salad & Raita">
+    <img src="https://images.unsplash.com/photo-1556912167-f556f1f39f5d?auto=format&fit=crop&w=70&h=70&q=80" alt="Salad & Raita">
     <div>Salad + Raita</div>
   </div>
   <div class="menu-item">
-    <img src="images/chawal.jpg" alt="Chawal">
+    <img src="https://images.unsplash.com/photo-1621609767442-7f1f70f4c056?auto=format&fit=crop&w=70&h=70&q=80" alt="Chawal">
     <div>Extra: 3 Chawal (jab available)</div>
   </div>
   <p class="price">₹90 Only</p>
@@ -162,7 +186,7 @@ function sendWhatsAppOrder() {
             "%0A5.%20Quantity:%20"+encodeURIComponent(quantity)+
             "%0A6.%20Payment:%20"+encodeURIComponent(paymentText)+
             "%0A7.%20Location:%20https://www.google.com/maps?q="+lat+","+lon+
-            "%0A%0A⚠️%20Order%201%20ghanta pehle dena zaroori hai";
+            "%0A%0A⚠️%20Order%201%20ghanta%20pehle dena zaroori hai";
 
             window.open(whatsappLink,"_blank");
         }, function(error){
@@ -175,5 +199,5 @@ function sendWhatsAppOrder() {
 </script>
 
 </body>
-  </html>
-
+                       </html>
+      
